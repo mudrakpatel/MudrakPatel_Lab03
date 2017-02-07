@@ -55,10 +55,10 @@ namespace MudrakPatel_Lab03
                                             orderby part.quantity
                                             select new { part.partDescription, part.quantity };
             
-            Console.WriteLine("--Objects sorted by part description--\n--------------------------------------------------------------------------------------------------------------------");
-            foreach (Invoice part in objectsByQuantity)
+            Console.WriteLine("--Object's part description and quantity sorted by quantity--\n--------------------------------------------------------------------------------------------------------------------");
+            foreach (var part in objectsByQuantity)
             {
-                Console.WriteLine("<<Price: " + part.price + "--" + part.partDescription + "==" + part.quantity + "==No's; Part number: " + part.partNumber + ">>");
+                Console.WriteLine("<<Part description: " + "--" + part.partDescription + "==" + part.quantity + ">>");
             }
         }
     }
