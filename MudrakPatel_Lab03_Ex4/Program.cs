@@ -11,11 +11,31 @@ namespace MudrakPatel_Lab03_Ex4
 
         static void Main(string[] args)
         {
-            int[] intArray = {0,1,2,3,4,5,6,7,8,9,10 };
-            List<int> intList = new List<int>();     
+            List<int> intList = new List<int>();
+            List<double> doubleList = new List<double>();
+            for (int index = 0; index <= 12; index++)
+            {
+                intList.Add(index);
+                doubleList.Add((double)index);
+            }
+
+            DisplayArray(intList.ToArray());
         }
 
         //Overloaded DisplayArray method
-       
+       public static void DisplayArray<Type>(Type[] inputCollectionObject)
+        {
+            Console.WriteLine("\nAll elements in the list:\n------------------------------------------");
+            foreach (var element in inputCollectionObject)
+            {
+                Console.WriteLine("Element: {0:3}",element);
+            }
+            Console.WriteLine("-----------------------------------------------s");
+        }
+
+        public static void DisplayArray<Type>(Type[] inputCollectionObject, int highIndex, int lowIndex)
+        {
+
+        }
     }
 }
