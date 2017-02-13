@@ -42,7 +42,7 @@ namespace MudrakPatel_Lab03_Ex4
         public static void DisplayArray<Type>(Type[] inputCollectionObject, int lowIndex , int highIndex)
         {
             var selectedElements = new List<int>();
-            for (int index = lowIndex; index <= highIndex; index++)
+            for (int index = lowIndex; index < highIndex; index++)
             {
                 selectedElements.Add(Convert.ToInt32(inputCollectionObject[index]));
             }
