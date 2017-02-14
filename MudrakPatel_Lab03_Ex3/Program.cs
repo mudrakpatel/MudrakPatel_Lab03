@@ -1,4 +1,4 @@
-﻿//Mudrak Patel; 300878960; Lab03
+﻿//Mudrak Patel; 300878960; Programming 3 Lab03
 
 using System;
 using System.Windows.Forms;
