@@ -13,7 +13,7 @@ namespace MudrakPatel_Lab03_Ex4
         {
             List<int> intList = new List<int>();
             List<double> doubleList = new List<double>();
-            for (int index = 0; index <= 12; index++)
+            for (int index = 0; index < 12; index++)
             {
                 intList.Add(index);
                 doubleList.Add((double)index);
@@ -31,12 +31,11 @@ namespace MudrakPatel_Lab03_Ex4
         //Overloaded DisplayArray method
        public static void DisplayArray<Type>(Type[] inputCollectionObject)
         {
-            Console.WriteLine("\nAll elements in the list:\n------------------------------------------");
-            foreach (var element in inputCollectionObject)
+            for (int index = 0; index < inputCollectionObject.Length; index++)
             {
-                Console.WriteLine("Element: {0:3}",element);
+                Console.WriteLine("Element: {0,2}", inputCollectionObject[index]);
             }
-            Console.WriteLine("-----------------------------------------------s");
+            Console.WriteLine("-----------------------------------------------");
         }
 
         public static void DisplayArray<Type>(Type[] inputCollectionObject, int lowIndex , int highIndex)
@@ -50,7 +49,7 @@ namespace MudrakPatel_Lab03_Ex4
             Console.WriteLine("The elements within the range you specified:\n--------------------------------------------------");
             foreach (var element in selectedElements)
             {
-                Console.WriteLine("Element: {0:3}", element);
+                Console.WriteLine("Element: {0,2}", element);
             }
         }
     }
