@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MudrakPatel_Lab03_Ex4
 {
@@ -40,16 +38,33 @@ namespace MudrakPatel_Lab03_Ex4
 
         public static void DisplayArray<Type>(Type[] inputCollectionObject, int lowIndex , int highIndex)
         {
-            var selectedElements = new List<int>();
-            for (int index = lowIndex; index < highIndex; index++)
+            if (lowIndex < highIndex)
             {
-                selectedElements.Add(Convert.ToInt32(inputCollectionObject[index]));
-            }
+                try
+                {
+                    var selectedElements = new List<int>();
+                    for (int index = lowIndex; index < highIndex; index++)
+                    {
+                        selectedElements.Add(Convert.ToInt32(inputCollectionObject[index]));
+                    }
 
-            Console.WriteLine("The elements within the range you specified:\n--------------------------------------------------");
-            foreach (var element in selectedElements)
-            {
-                Console.WriteLine("Element: {0,2}", element);
+                    Console.WriteLine("The elements within the range you specified:\n--------------------------------------------------");
+                    foreach (var element in selectedElements)
+                    {
+                        Console.WriteLine("Element: {0,2}", element);
+                    }
+                }
+                catch (IndexOutOfRangeException exception)
+                {
+                    MessageBox.Show(exception.Message, "Exception caught!");
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Exception caught!");
+                } 
+            }
+            else {
+                MessageBox.Show("The lowIndex value must be less than highIndexValue.","Index issues!");
             }
         }
     }
