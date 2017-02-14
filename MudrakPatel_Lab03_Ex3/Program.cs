@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//Mudrak Patel; 300878960; Lab03
+
+using System;
 using System.Windows.Forms;
 
 namespace MudrakPatel_Lab03_Ex3

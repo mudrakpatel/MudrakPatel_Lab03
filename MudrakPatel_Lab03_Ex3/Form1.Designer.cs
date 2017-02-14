@@ -1,4 +1,6 @@
-﻿namespace MudrakPatel_Lab03_Ex3
+﻿//Mudrak Patel; 300878960; Lab03
+
+namespace MudrakPatel_Lab03_Ex3
 {
     partial class Form1
     {
@@ -31,10 +33,12 @@
             this.headingLabel = new System.Windows.Forms.Label();
             this.intTextBox = new System.Windows.Forms.TextBox();
             this.doubleTextBox = new System.Windows.Forms.TextBox();
-            this.generateNumberButton = new System.Windows.Forms.Button();
+            this.generateIntButton = new System.Windows.Forms.Button();
             this.searchIntTextBox = new System.Windows.Forms.TextBox();
             this.searchDoubleTextBox = new System.Windows.Forms.TextBox();
             this.subHeadingLabel = new System.Windows.Forms.Label();
+            this.generateDoubleButton = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headingLabel
@@ -52,6 +56,7 @@
             this.intTextBox.Location = new System.Drawing.Point(77, 87);
             this.intTextBox.Multiline = true;
             this.intTextBox.Name = "intTextBox";
+            this.intTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.intTextBox.Size = new System.Drawing.Size(100, 144);
             this.intTextBox.TabIndex = 1;
             // 
@@ -60,33 +65,35 @@
             this.doubleTextBox.Location = new System.Drawing.Point(267, 87);
             this.doubleTextBox.Multiline = true;
             this.doubleTextBox.Name = "doubleTextBox";
+            this.doubleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.doubleTextBox.Size = new System.Drawing.Size(99, 144);
             this.doubleTextBox.TabIndex = 2;
             // 
-            // generateNumberButton
+            // generateIntButton
             // 
-            this.generateNumberButton.Location = new System.Drawing.Point(179, 355);
-            this.generateNumberButton.Name = "generateNumberButton";
-            this.generateNumberButton.Size = new System.Drawing.Size(100, 23);
-            this.generateNumberButton.TabIndex = 3;
-            this.generateNumberButton.Text = "Generate";
-            this.generateNumberButton.UseVisualStyleBackColor = true;
+            this.generateIntButton.Location = new System.Drawing.Point(77, 343);
+            this.generateIntButton.Name = "generateIntButton";
+            this.generateIntButton.Size = new System.Drawing.Size(100, 23);
+            this.generateIntButton.TabIndex = 3;
+            this.generateIntButton.Text = "Generate Int";
+            this.generateIntButton.UseVisualStyleBackColor = true;
+            this.generateIntButton.Click += new System.EventHandler(this.generateIntButton_Click);
             // 
             // searchIntTextBox
             // 
-            this.searchIntTextBox.Location = new System.Drawing.Point(129, 261);
+            this.searchIntTextBox.Location = new System.Drawing.Point(77, 253);
             this.searchIntTextBox.Name = "searchIntTextBox";
-            this.searchIntTextBox.Size = new System.Drawing.Size(202, 20);
+            this.searchIntTextBox.Size = new System.Drawing.Size(179, 20);
             this.searchIntTextBox.TabIndex = 4;
-            this.searchIntTextBox.Text = "Search int index";
+            this.searchIntTextBox.Text = "Search index for an int value";
             // 
             // searchDoubleTextBox
             // 
-            this.searchDoubleTextBox.Location = new System.Drawing.Point(129, 300);
+            this.searchDoubleTextBox.Location = new System.Drawing.Point(77, 292);
             this.searchDoubleTextBox.Name = "searchDoubleTextBox";
-            this.searchDoubleTextBox.Size = new System.Drawing.Size(202, 20);
+            this.searchDoubleTextBox.Size = new System.Drawing.Size(179, 20);
             this.searchDoubleTextBox.TabIndex = 5;
-            this.searchDoubleTextBox.Text = "Search double index";
+            this.searchDoubleTextBox.Text = "Search index for an double value";
             // 
             // subHeadingLabel
             // 
@@ -98,15 +105,37 @@
             this.subHeadingLabel.TabIndex = 6;
             this.subHeadingLabel.Text = "     Int                   Double";
             // 
+            // generateDoubleButton
+            // 
+            this.generateDoubleButton.Location = new System.Drawing.Point(267, 343);
+            this.generateDoubleButton.Name = "generateDoubleButton";
+            this.generateDoubleButton.Size = new System.Drawing.Size(99, 23);
+            this.generateDoubleButton.TabIndex = 7;
+            this.generateDoubleButton.Text = "Generate double";
+            this.generateDoubleButton.UseVisualStyleBackColor = true;
+            this.generateDoubleButton.Click += new System.EventHandler(this.generateDoubleButton_Click);
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(290, 253);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(51, 59);
+            this.searchButton.TabIndex = 8;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 390);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.generateDoubleButton);
             this.Controls.Add(this.subHeadingLabel);
             this.Controls.Add(this.searchDoubleTextBox);
             this.Controls.Add(this.searchIntTextBox);
-            this.Controls.Add(this.generateNumberButton);
+            this.Controls.Add(this.generateIntButton);
             this.Controls.Add(this.doubleTextBox);
             this.Controls.Add(this.intTextBox);
             this.Controls.Add(this.headingLabel);
@@ -122,10 +151,12 @@
         private System.Windows.Forms.Label headingLabel;
         private System.Windows.Forms.TextBox intTextBox;
         private System.Windows.Forms.TextBox doubleTextBox;
-        private System.Windows.Forms.Button generateNumberButton;
+        private System.Windows.Forms.Button generateIntButton;
         private System.Windows.Forms.TextBox searchIntTextBox;
         private System.Windows.Forms.TextBox searchDoubleTextBox;
         private System.Windows.Forms.Label subHeadingLabel;
+        private System.Windows.Forms.Button generateDoubleButton;
+        private System.Windows.Forms.Button searchButton;
     }
 }
 
